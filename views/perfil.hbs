@@ -1,0 +1,29 @@
+<h1 class='text-center'>{{user.username}}</h1>
+<p class='text-center'>Edita aquí tu perfil</p>
+
+<div class='my-5 text-center'>
+
+	{{#if imagen}}
+			<img class='rounded-circle' src='/img/perfiles/{{imagen}}' alt='ImgUser' />
+ 
+     {{else}}
+      <img class='rounded-circle' src='/img/perfiles/perfil.jpg' alt='default' />
+	{{/if}}
+
+</div>
+
+<form action='/perfil?_csrf={{csrfToken}}' method='POST' enctype='multipart/form-data'>
+	{{!-- <input type='hidden' name='_csrf' value='{{csrfToken}}' /> --}}
+
+	<label for='myFile'></label>
+	<input
+    id='formFile'
+		class='form-control form-control-sm'
+		name='myFile'
+		type='file'
+		placeholder='Ejemplo: imagen.jpg'
+	/>
+
+	<input type='submit' class='btn btn-dark my-3' value="Agregar"></input>
+
+</form>

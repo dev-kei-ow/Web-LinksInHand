@@ -1,0 +1,63 @@
+<style>
+	/* Estilos personalizados para ajustar la posición del menú desplegable */
+	.navbar-nav.ms-auto { margin-right: 80px; /* Puedes ajustar el valor de margin-right según
+	sea necesario */ }
+
+</style>
+
+<nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
+	<div class='container-fluid'>
+		<a class='navbar-brand' href='#'>LinksInHand</a>
+		<button
+			class='navbar-toggler'
+			type='button'
+			data-bs-toggle='collapse'
+			data-bs-target='#navbarNavDropdown'
+			aria-controls='navbarNavDropdown'
+			aria-expanded='false'
+			aria-label='Toggle navigation'
+		>
+			<span class='navbar-toggler-icon'></span>
+		</button>
+		<div class='collapse navbar-collapse' id='navbarNavDropdown'>
+			<ul class='navbar-nav'>
+				<li class='nav-item'>
+					<a class='nav-link active' aria-current='page' href='#'>Home</a>
+				</li>
+				<li class='nav-item'>
+					<a class='nav-link' href='/perfil'>Perfil</a>
+				</li>
+				<li class='nav-item'>
+					<a class='nav-link' href='##'>Nosotros</a>
+				</li>
+				<li class='nav-item'>
+					<a class='nav-link' href='##'>Contactanos</a>
+				</li>
+			</ul>
+			<!-- Agregamos un ul adicional y aplicamos la clase 'ms-auto' aquí -->
+			<ul class='navbar-nav ms-auto'>
+				<li class='nav-item dropdown'>
+					<a
+						class='nav-link dropdown-toggle'
+						href='#'
+						role='button'
+						data-bs-toggle='dropdown'
+						aria-expanded='false'
+					>
+						<i class='fas fa-user'></i>
+						<!-- Icono de usuario -->
+					</a>
+					<ul class='dropdown-menu'>
+						<li><a class='dropdown-item' href='/auth/login'>LogIn</a></li>
+						<li class='dropdown-divider'></li>
+						<!-- Línea divisoria -->
+						<li><a class='dropdown-item' href='/auth/logout'>LogOut</a></li>
+						<li class='dropdown-divider'></li>
+						<!-- Línea divisoria -->
+						<li><a class='dropdown-item' href='/auth/register'>Register</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>

@@ -1,0 +1,11 @@
+<h1>Agregue sus URLs</h1>
+
+{{>Form}}
+<div class='row'>
+  {{#each urls}}
+   {{!-- item=this se llaman los props en los componentes, (tanto en View como en React)--}}
+    <div class='col-md-6'>
+      {{> Card item=this}}
+    </div>
+  {{/each}}
+</div>

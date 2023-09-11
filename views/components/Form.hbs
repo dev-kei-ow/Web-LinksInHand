@@ -1,0 +1,32 @@
+{{#if url}}
+
+	{{! si existe la url para editar pintame el formulario editar }}
+	<form action='/editar/{{url._id}}' method='POST'>
+
+		<input type='hidden' name='_csrf' value='{{csrfToken}}' />
+
+		<input
+			type='text'
+			value='{{url.origin}}'
+			name='origin'
+			class='form-control my-2'
+			placeholder='Ingrese Url'
+		/>
+
+		<button type='submit' class='btn btn-warning w-100 mb-2'>Editar URL</button>
+
+	</form>
+
+{{else}}
+
+	<form action='/' method='POST'>
+
+		<input type='hidden' name='_csrf' value='{{csrfToken}}' />
+
+		<input type='text' name='origin' class='form-control my-2' placeholder='Ingrese Url' />
+
+		<button type='submit' class='btn btn-primary w-100 mb-2'>Agregar URL</button>
+
+	</form>
+
+{{/if}}

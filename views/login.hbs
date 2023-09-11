@@ -1,0 +1,29 @@
+<div class='card mx-auto my-5' style='width: 18rem;'>
+	<div class='card-body'>
+		<h1 class='text-center my-2'>LOGIN</h1>
+		<hr />
+		<form action='/auth/login' class='text-center' method='POST'>
+
+			<input type='hidden' name='_csrf' value='{{csrfToken}}' />
+
+			<input
+				type='text'
+				name='email'
+				class='form-control mb-2'
+				value='keiow@gmail.com'
+				placeholder='Ingrese email'
+			/>
+			<input
+				type='password'
+				name='password'
+				class='form-control mb-2'
+				value='123123'
+				placeholder='Ingrese password'
+			/>
+			<button class='btn btn-primary px-2' type='submit'>
+				<i class='fas fa-sign-in-alt mx-1'></i>
+				Acceder
+			</button>
+		</form>
+	</div>
+</div>

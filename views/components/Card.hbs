@@ -1,0 +1,23 @@
+<article class='card mb-2'>
+
+	<div class='card-body'>
+
+		<a href='{{item.origin}}' target='_blank'>{{item.origin}}</a>
+
+		<p>
+			<span class='badge text-bg-secondary mt-2'>{{item.shortUrl}}</span>
+		</p>
+
+		<button href='#' class='btn btn-info' data-short='{{item.shortUrl}}'>
+			<i class='fas fa-copy mx-2 justify-content-center'></i>
+		</button>
+		<a href='/editar/{{item._id}}' class='btn btn-warning'>
+			<i class='fas fa-edit mx-2 justify-content-center'></i>
+		</a>
+		<a href='/eliminar/{{item._id}}' class='btn btn-danger'>
+			<i class='fas fa-trash-alt mx-2 justify-content-center'></i>
+		</a>
+
+	</div>
+
+</article>
